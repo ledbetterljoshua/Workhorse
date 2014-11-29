@@ -1,0 +1,184 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.backimg {
+	background: image-url('Wood-Background.jpg');
+	width: 100%;
+	height: 143%;
+	position: absolute;
+	background-size: cover;
+}
+.mainContainer {
+	zoom: .8;
+	max-width: 1642px;
+	margin: 0 auto;
+}
+.homeBody {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.homeContainer {position: relative;max-height: 1000px;}
+.sqaureMenu {
+	background: image-url('menu.png');
+	width: 444px;
+	height: 443px;
+	position: relative;
+	-webkit-transform: rotate(344deg) translate3d(0px, 0px, 0px);
+	        transform: rotate(344deg) translate3d(0px, 0px, 0px);
+}
+.sqaureMenu li {
+	position: relative;
+	top: 117px;
+	list-style: none;
+	color: transparent;
+	margin: -5px 0;
+	font-size: 22px;
+	-webkit-transform: rotate(-7deg);
+	        transform: rotate(-7deg);
+	left: 171px;
+	width: 234px;
+}
+.sqaureMenu a {
+color: transparent;
+}
+.sqaureMenu a:hover {
+border-bottom: 1px #428bca solid;
+}
+.logo {
+	background: image-url('logo.png');
+	width: 844px;
+	height: 131px;
+	position: relative;
+	background-repeat: no-repeat;
+	left: 450px;
+	top: -405px;
+}
+.homeMenu {
+	background: image-url('homeBoard.png');
+	width: 980px;
+	height: 800px;
+	background-repeat: no-repeat;
+	-webkit-transform: rotate(270deg);
+	        transform: rotate(270deg);
+	position: relative;
+	top: -269px;
+	left: 180px;
+}
+section.menuText {
+	-webkit-transform: rotate(90deg);
+	        transform: rotate(90deg);
+	width: 410px;
+	position: absolute;
+	margin-left: 199px;
+	margin-top: 134px;
+	color: #fff;
+	height: 462px;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.instgramCont {
+	background: image-url('instagramCase.png');
+	width: 374px;
+	height: 450px;
+	position: relative;
+	background-repeat: no-repeat;
+	top: -1100px;
+	left: 930px;
+	z-index: 1;
+}
+img.styleInstImage {
+	width: 345px;
+	margin-top: 34px;
+	margin-left: 19px;
+	overflow: hidden;
+	height: 333px;
+}
+.googleMaps {
+	/*background: image-url('maps.jpg'); */
+	width: 374px;
+	height: 385px;
+	position: relative;
+	background-repeat: no-repeat;
+	top: -1075px;
+	left: 930px;
+	z-index: 2;
+}
+
+.twitterPlace {
+	position: absolute;
+	z-index: 1;
+	max-height: 205px;
+	overflow: scroll;
+	top: -88px;
+	left: 514px;
+	zoom: .8;
+	border-radius: 7px;
+	opacity: .9;
+	min-width: 520px;
+	max-width: 520px;
+}
+.smokeyD {
+	background: image-url('smokey.png');
+	position: relative;
+	background-repeat: no-repeat;
+	top: -1830px;
+	height: 100px;
+	transform: rotate(14deg);
+	-webkit-transform: rotate(14deg);
+	width: 260px;
+}
+.imagesRightHome {
+	position: relative;
+	top: -2070px;
+	left: 1330px;
+	max-width: 224px;
+}
+.flags {
+	background: image-url('worldBakery.png');
+	position: relative;
+	background-repeat: no-repeat;
+	height: 150px;
+	transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	top: 22px;
+	left: -60px;
+	z-index: 0;
+	width: 160px;
+}
+.bastrop {
+	background: image-url('bastrop.png');
+	position: relative;
+	background-repeat: no-repeat;
+	height: 150px;
+	width: 260px;
+	top: -60px;
+}
+.lastimage2 {
+	background: image-url('burger.png');
+	position: relative;
+	background-repeat: no-repeat;
+	position: relative;
+	background-repeat: no-repeat;
+	width: 360px;
+	height: 400px;
+	transform: rotate(-16deg);
+	-webkit-transform: rotate(-16deg);
+	top: -70px;
+	left: -70px;
+}
+.lastimage1 {
+	transform: rotate(11deg);
+	-webkit-transform: rotate(11deg);
+	position: relative;
+	top: -180px;
+	left: -120px;
+	z-index: 1;
+}
+
+
+
+
+

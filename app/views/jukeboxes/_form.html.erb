@@ -1,0 +1,25 @@
+<%= form_for(@jukebox) do |f| %>
+  <% if @jukebox.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@jukebox.errors.count, "error") %> prohibited this jukebox from being saved:</h2>
+
+      <ul>
+      <% @jukebox.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <div class="form-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "form-control" %>
+    </div>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

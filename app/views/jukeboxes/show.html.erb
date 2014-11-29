@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= image_tag @jukebox.image.url(:original, timestamp: false) %>
+  <%= @jukebox.description %>
+</p>
+
+<%= link_to 'Edit', edit_jukebox_path(@jukebox) %> |
+<%= link_to 'Back', jukeboxes_path %>
