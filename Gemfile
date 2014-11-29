@@ -19,6 +19,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'aws-sdk', '~> 1.20.0'
 gem 'twitter'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
