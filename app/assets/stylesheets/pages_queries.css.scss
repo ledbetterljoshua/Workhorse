@@ -1,0 +1,82 @@
+@media screen and (max-width: 1260px) {
+	.imagesRightHome {
+		top: -1780px;
+		left: 410px;
+		max-width: 834px;
+	}
+	.lastimage2 {
+		top: 184px;
+		left: 90px;
+	}
+	.bastrop {
+		top: 400px;
+		left: 430px;
+	}
+	.flags {
+		top: 662px;
+		left: 530px;
+	}
+	.backimg {
+		position: fixed;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.sqaureMenu {
+		display: none !important;
+	}
+	.homeContainer {
+		top: 430px;
+		left: -300px;
+	}
+	.logo {
+		left: 300px;margin: 0 auto;
+	}
+	.smokeyD {display: none;}
+
+}
+
+@media screen and (max-width: 640px) {
+	img.menuBoard {
+		vertical-align: middle;
+		width: 866px;
+		margin-top: -46px;
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	section.menuText {
+		width: 370px;
+		margin-left: 199px;
+		margin-top: -487px;
+		height: 402px;
+	}
+	.homeMenu {
+		margin-top: -150px;
+		margin-left: 80px;
+		width: initial;
+	}
+	.logo {
+		height: 402px;margin: 0 auto;
+	}
+	.instgramCont {
+		left: 320px;
+		margin-top: 678px;
+		transform: rotate(-10deg);
+	}
+	.googleMaps {
+		display: none;
+	}
+	.imagesRightHome {
+		left: 410px;
+		max-width: 464px;
+		top: -1280px;
+	}
+	.flags {display: none;}
+	.bastrop {display: none;}
+	.twitterPlace {
+		top: -306px;
+		left: 590px;
+		zoom: 0.65;
+	}
+}

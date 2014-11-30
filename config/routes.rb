@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :logos
+
   resources :employees
 
   devise_for :users

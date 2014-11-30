@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   	@phones = Phone.all
   	@reviews = Review.all
   	@menus = Menu.all
+    @logos = Logo.all
   end
   def admin 
     @drinks = Drink.all
@@ -23,7 +24,8 @@ class PagesController < ApplicationController
     @reviews = Review.all
     @menus = Menu.all
     @employees = Employee.all
-
+    @logos = Logo.all
+    
   end 
 
 end

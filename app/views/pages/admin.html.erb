@@ -1,14 +1,7 @@
 <% if user_signed_in? %>
 
 <div class="container">
-			<header class="clearfix">
-				<span>WorkHorse <span class="bp-icon bp-icon-about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
-				<h1>Admin Page</h1>
-				<nav>
-					<%= link_to 'View Site', root_path %>
-					<%= link_to 'My Account', edit_user_registration_path %>
-				</nav>
-			</header>	
+			
 			<div id="tabs" class="tabs">
 			<nav>
 					<ul>
@@ -132,6 +125,14 @@
                         <%= link_to 'New jukebox', new_jukebox_path %>
 					</section>
 					<section id="section-8">
+            <% @logos.each do |logo| %>
+                          
+            <%= image_tag logo.image.url(:original, timestamp: false) %>
+                  <% if logo.user == current_user %>
+                      <%= link_to 'Edit', edit_logo_path(logo) %>
+                    <% end %>
+                
+            <% end %>
 						<% @images.each do |image| %>
                           
                            <%= image_tag image.image.url(:original, timestamp: false) %>
