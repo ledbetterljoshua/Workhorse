@@ -12,7 +12,7 @@ class JukeboxesController < ApplicationController
   end
 
   def new
-    @jukebox = current_user.jukeboxes.build
+    @jukebox = Jukebox.new
   end
 
   def edit
