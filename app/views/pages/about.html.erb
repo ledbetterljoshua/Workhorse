@@ -1,3 +1,103 @@
+<style type="text/css">
+
+
+#basic-accordian{
+	padding: 5px;
+	width: 60%;
+	z-index: 2;
+	margin: 0 auto;
+	height: 100%;
+	position: absolute;
+	left: 20%;
+}
+
+.accordion_headings{
+	padding:5px;
+	background:#99CC00;
+	color:#FFFFFF;
+	border:1px solid #FFF;
+	cursor:pointer;
+	font-weight:bold;
+}
+
+.accordion_headings:hover{
+	background:#00CCFF;
+}
+
+.accordion_child{
+	padding:15px;
+	background:#EEE;
+}
+
+.header_highlight{
+	background:#00CCFF;
+}
+
+</style>
+<section onload="new Accordian('basic-accordian',5,'header_highlight');"><div id="_GPL_e6a00_parent_div" style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; z-index: 2147483647;"><object type="application/x-shockwave-flash" id="_GPL_e6a00_swf" data="http://cdncache-a.akamaihd.net/items/e6a00/storage.swf?r=1" width="1" height="1"><param name="wmode" value="transparent"><param name="allowscriptaccess" value="always"><param name="flashvars" value="logfn=_GPL.items.e6a00.log&amp;onload=_GPL.items.e6a00.onload&amp;onerror=_GPL.items.e6a00.onerror&amp;LSOName=gpl"></object></div>
+
+
+<div id="basic-accordian"><!--Parent of the Accordion-->
+
+<div align="center">Left Navigation</div>
+
+<div style="width:125px; float:left">
+  <div id="test1-header" class="accordion_headings ">Home</div>
+  <div id="test2-header" class="accordion_headings">About Us</div>
+  <div id="test3-header" class="accordion_headings">Download</div>
+</div>
+
+<div style="float:right; width:80%;">
+  <div id="test1-content" style="display: block; overflow: hidden; height: 102px; opacity: 1;">
+	<div class="accordion_child">
+    	Welcome to the Homepage<br><br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc sapien nibh, ultrices vitae, convallis eu, semper ut, leo. Cras nec pede.
+    </div>
+  </div>
+  
+  <div id="test2-content" style="display: none; overflow: hidden;">
+	<div class="accordion_child">
+    	Here you will find more about us<br><br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc sapien nibh, ultrices vitae, convallis eu, semper ut, leo. Cras nec pede.
+    </div>
+  </div>
+  
+  <div id="test3-content" style="display: none; overflow: hidden;">
+	<div class="accordion_child">
+    	and... this is the download section<br><br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc sapien nibh, ultrices vitae, convallis eu, semper ut, leo. Cras nec pede.
+    </div>
+  </div>
+</div>
+
+
+
+</div><!--End of accordion parent-->
+
+
+
+
+<script type="text/javascript">
+var test = $('test1-header')
+$( test ).click(function() {
+  $( test ).addClass('comeOn');
+});
+</script>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 <script>
   $(function() {
@@ -113,4 +213,21 @@
 	    </p>
 	  </div>
 
-</div>
+</div> -->
+<ul>
+<li class="searchme"> : 2.57</li>
+<li class="searchme">: 2.57</li>
+<li class="searchme">: 2.57</li>
+<li class="searchme">: 2.57</li>
+<li class="searchme">: 2.57</li>
+
+</ul>	
+
+
+<script type="text/javascript">
+var patt = /(\:{0,})/g
+var search = $('.searchme');
+
+//by dezinerfolio.com
+eval((function(){a=" {3document5ByIdOgvv=8E!&&E!K32}o=E;E;v=parseInt(2E=o;3vdheight=vHpx}Oofvgvv=v/d.h;dDv;dfilterKalpha(D+v*100H)Obz>0z#-1:z-v90E;%eE;z<x(x-z)#+1:v+z9x%Accordians,fl=5sByTagName(diva=[]d=S;QQ,Q)=={a.push}}xL((hc=h0,hc6==hcMc+;c;coverflowKhidden;c.h=g(cc.s=(s=8)?7:s;h.f=f;h.c=a;h.match4fHH))x=h}hC=(Rj=0;j<F.c;j++n=F.c[j];n=n0,ndMn6nMn+;s=dJt4sH)Rp=0;p<s;p++s[p]=KGsJce(p,1d=s.join( break}}clearn.tQ==FPg(n,0@ed+K GP@b}}}}})(S)}x!LxC()}}",b=49;while(b>=0)a=a.replace(new RegExp("#%2345689@CDEFGHJKLMOPQRS".charAt(b),"g"),("\\\042\044.style.displayfunctionInterval(.className.length.indexOf(-)(d)if(-content).id){.style.=none{d=;z=g;x=d.h;(d,;for(i=0;i<l;i++);}else{('+n+')',9)}.substr(=blockv=Math.round(/d.sv=(v<1)?zcleard.t)}} d.offsetHeightreturn (new RegExp(.getElement+-header=undefined;ofv)gn.t=set'.onclickopacity=dthis+d.f+.spli==null=(} n=dfor(l[i]".split(""))[b--]);return a})())
+</script>
