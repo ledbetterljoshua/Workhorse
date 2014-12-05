@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
    has_many :reviews
    has_many :employees
    has_many :logos
+   has_many :facts
+   has_many :jukeboxes
 
 
 end

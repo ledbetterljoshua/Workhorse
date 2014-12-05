@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hours: MyString
+  pets: MyText
+  happyhour: MyText
+  fullbar: MyText
+  bikeracks: MyString
+  music: MyText
+  games: MyText
+  wifi: MyString
+  reservations: MyString
+  smoking: MyString
+  parking: MyString
+  whattoexpect: MyText
+
+two:
+  hours: MyString
+  pets: MyText
+  happyhour: MyText
+  fullbar: MyText
+  bikeracks: MyString
+  music: MyText
+  games: MyText
+  wifi: MyString
+  reservations: MyString
+  smoking: MyString
+  parking: MyString
+  whattoexpect: MyText

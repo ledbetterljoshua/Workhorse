@@ -1,7 +1,9 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+body {
+	background: image-url('Wood-Background.jpg');
+}
 .contWidth {
 	max-width: 460px;
 	margin: 80px auto 0 auto;
@@ -12,30 +14,30 @@
 	width: 374px; height: 450px; position: absolute;z-index: 99;
 }
 .backimg {
-	background: image-url('Wood-Background.jpg');
-	width: 100%;
-	height: 143%;
-	position: absolute;
-	background-size: cover;
+	
 }
 .mainContainer {
 	zoom: .8;
 	max-width: 1642px;
 	margin: 0 auto;
+	-moz-transform: scale(0.8);
+	position: relative;
+left: -100px
 }
 .homeBody {
 	width: 100%;
 	height: 100%;
 	position: relative;
 }
-.homeContainer {position: relative;max-height: 1000px;top: 80px;}
+.homeContainer {position: relative;max-height: 1000px;top: 480px;}
 .sqaureMenu {
 	background: image-url('menu.png');
 	width: 444px;
 	height: 443px;
-	position: relative;
+	position: absolute;
 	-webkit-transform: rotate(344deg) translate3d(0px, 0px, 0px);
 	        transform: rotate(344deg) translate3d(0px, 0px, 0px);
+	top: -40px;
 }
 .sqaureMenu li {
 	position: relative;
@@ -105,14 +107,13 @@ section.menuText {
 }
 .instgramCont {
 	background: image-url('instagramCase.png');
-	width: 374px;
 	height: 450px;
-	position: relative;
-	background-repeat: no-repeat;
-	top: -1100px;
-	left: 930px;
-	z-index: 1;
-	margin-top: 52px;
+    left: 930px;
+    margin-top: 52px;
+    position: absolute;
+    top: -320px;
+    width: 374px;
+    z-index: 1;
 }
 img.styleInstImage {
 	width: 345px;
@@ -123,13 +124,13 @@ img.styleInstImage {
 }
 .googleMaps {
 	/*background: image-url('maps.jpg'); */
-	width: 374px;
-	height: 385px;
-	position: relative;
 	background-repeat: no-repeat;
-	top: -1075px;
-	left: 930px;
-	z-index: 2;
+    height: 385px;
+    left: 930px;
+    position: absolute;
+    top: 200px;
+    width: 374px;
+    z-index: 2;
 }
 
 .twitterPlace {
@@ -140,11 +141,25 @@ img.styleInstImage {
 	top: -234px;
 	left: 595px;
 	zoom: .75;
+	-moz-transform: scale(0.75);
 	border-radius: 7px;
 	opacity: .9;
 	min-width: 520px;
 	max-width: 520px;
 }
+@-moz-document url-prefix() {
+	.twitterPlace {
+        left: 385px;
+    	max-height: 124px;
+    	top: -196px;
+    	width: 514px;
+    }
+    .homeContainer {
+    max-height: 620px;
+	}
+}
+
+
 .smokeyD {
 	background: image-url('smokey.png');
 	position: relative;
@@ -156,10 +171,10 @@ img.styleInstImage {
 	width: 260px;
 }
 .imagesRightHome {
-	position: relative;
-	top: -2070px;
-	left: 1330px;
-	max-width: 224px;
+	left: 1400px;
+    max-width: 224px;
+    position: absolute;
+    top: -290px;
 }
 .flags {
 	background: image-url('worldBakery.png');

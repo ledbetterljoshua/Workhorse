@@ -1,0 +1,18 @@
+<div class="container demo-3">
+	
+	<ul class="grid cs-style-4">
+		<% @jukeboxes.each do |jukebox| %>
+		<li>
+			<figure>
+				<div><%= image_tag jukebox.image.url(:original, timestamp: false) %></div>
+				<figcaption>
+					<h3><%= jukebox.band %></h3>
+					<span><%= jukebox.description %></span>
+					<a href="<%= jukebox.url %> " target="_blank">See More</a>
+				</figcaption>
+			</figure>
+		</li>
+		 <% end %>
+	</ul>
+</div><!-- /container -->
+

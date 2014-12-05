@@ -1,0 +1,47 @@
+<h1>Listing facts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hours</th>
+      <th>Pets</th>
+      <th>Happyhour</th>
+      <th>Fullbar</th>
+      <th>Bikeracks</th>
+      <th>Music</th>
+      <th>Games</th>
+      <th>Wifi</th>
+      <th>Reservations</th>
+      <th>Smoking</th>
+      <th>Parking</th>
+      <th>Whattoexpect</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @facts.each do |fact| %>
+      <tr>
+        <td><%= fact.hours %></td>
+        <td><%= fact.pets %></td>
+        <td><%= fact.happyhour %></td>
+        <td><%= fact.fullbar %></td>
+        <td><%= fact.bikeracks %></td>
+        <td><%= fact.music %></td>
+        <td><%= fact.games %></td>
+        <td><%= fact.wifi %></td>
+        <td><%= fact.reservations %></td>
+        <td><%= fact.smoking %></td>
+        <td><%= fact.parking %></td>
+        <td><%= fact.whattoexpect %></td>
+        <td><%= link_to 'Show', fact %></td>
+        <td><%= link_to 'Edit', edit_fact_path(fact) %></td>
+        <td><%= link_to 'Destroy', fact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fact', new_fact_path %>

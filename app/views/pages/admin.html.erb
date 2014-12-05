@@ -14,6 +14,8 @@
 						<li><a href="#section-7" class="icon-truck"><span>JukeBox</span></a></li>
 						<li><a href="#section-8" class="icon-truck"><span>images</span></a></li>
             <li><a href="#section-9" class="icon-truck"><span>Employees</span></a></li>
+            <li><a href="#section-10" class="icon-truck"><span>Facts</span></a></li>
+
 					</ul>
 				</nav>
 				<div class="content">
@@ -111,16 +113,23 @@
                         <%= link_to 'New review', new_review_path %>
 					</section>
 					<section id="section-7">
-						<% @jukeboxes.each do |jukebox| %>
-                          
-                           
-                              <h2><%= jukebox.description %></h2>
-                              <% if jukebox.user == current_user %>
-                                  <%= link_to 'Edit', edit_jukebox_path(jukebox) %>
-                                  <%= button_to 'Destroy', jukebox, method: :delete, data: { confirm: 'Are you sure?' } %>
-                                <% end %>
-                            
-                        <% end %>
+						<div class="container demo-3">
+  
+                <ul class="grid cs-style-4">
+                  <% @jukeboxes.each do |jukebox| %>
+                  <li>
+                    <figure>
+                      <div><%= image_tag jukebox.image.url(:original, timestamp: false) %></div>
+                      <figcaption>
+                        <h3><%= jukebox.band %></h3>
+                        <span><%= jukebox.description %></span>
+                        <a href="<%= jukebox.url %>" target="_blank">See More</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+                   <% end %>
+                </ul>
+              </div><!-- /container -->
 
                         <%= link_to 'New jukebox', new_jukebox_path %>
 					</section>
@@ -146,7 +155,7 @@
 
                         <%= link_to 'New photo', new_image_path %>
 					</section>
-          <section id="section-8">
+          <section id="section-9">
             <% @employees.each do |employee| %>
                           
                            
@@ -159,6 +168,30 @@
                         <% end %>
 
                         <%= link_to 'New photo', new_employee_path %>
+          </section>
+          <section id="section-10">
+            <% @facts.each do |fact| %>
+                          
+                           
+                              <h3><%= fact.hours %></h3>
+                              <h3><%= fact.pets %></h3>
+                              <h3><%= fact.happyhour %></h3>
+                              <h3><%= fact.fullbar %></h3>
+                              <h3><%= fact.bikeracks %></h3>
+                              <h3><%= fact.music %></h3>
+                              <h3><%= fact.games %></h3>
+                              <h3><%= fact.wifi %></h3>
+                              <h3><%= fact.reservations %></h3>
+                              <h3><%= fact.smoking %></h3>
+                              <h3><%= fact.parking %></h3>
+                              <h3><%= fact.whattoexpect %></h3>
+                              <% if fact.user == current_user %>
+                                  <%= link_to 'edit', edit_fact_path(fact) %>
+                                <% end %>
+                            
+                        <% end %>
+
+                        
           </section>
 				</div><!-- /content -->
 			</div><!-- /tabs -->

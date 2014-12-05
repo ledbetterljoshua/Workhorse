@@ -25,7 +25,12 @@ class PagesController < ApplicationController
     @menus = Menu.all
     @employees = Employee.all
     @logos = Logo.all
-    
+    @facts = Fact.all
   end 
-
+  def about 
+    @facts = Fact.all
+  end
+  def jukebox 
+    @jukeboxes = Jukebox.all
+  end
 end

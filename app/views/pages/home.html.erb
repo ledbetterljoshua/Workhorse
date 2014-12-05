@@ -7,13 +7,15 @@
 		  <li><a href="#">-BEER</a></li>
 		  <li><a href="#">-HOUSE COCKTAILS</a></li>
 		  <li><a href="#">-MENU</a></li>
-		  <li><a href="#">-JUKEBOX</a></li>
+		  <li><a href="pages/jukebox">-JUKEBOX</a></li>
 		  <li><a href="#">-PICS</a></li>
 		  <li><a href="#">-STAFF</a></li>
 		</div>
 		<div class="homeContainer">
 			<div class="logo">
+			<%= link_to root_path do %>
 			<%= image_tag @logos.last.image.url(:original, timestamp: false), :class => "styleLogo"  %>
+			<% end %>
 			</div>
 			<div class="twitterPlace">
 				<a class="twitter-timeline" href="https://twitter.com/Workhorsebar" data-widget-id="538442129073127424">Tweets by @Workhorsebar</a>

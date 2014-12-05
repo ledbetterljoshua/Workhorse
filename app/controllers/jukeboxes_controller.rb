@@ -12,7 +12,7 @@ class JukeboxesController < ApplicationController
   end
 
   def new
-    @jukebox = current_user.jukeboxs.build
+    @jukebox = current_user.jukeboxes.build
   end
 
   def edit
@@ -46,6 +46,6 @@ end
     end
 
     def jukebox_params
-      params.require(:jukebox).permit(:description, :jukebox)
+      params.require(:jukebox).permit(:description, :jukebox, :image, :url, :band)
     end
 end

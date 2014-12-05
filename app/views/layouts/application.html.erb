@@ -20,7 +20,7 @@ body {margin-top: 100px;}
 </style>
 <div class="container" style="height: 100px;position: fixed;top: 0;z-index: 9999;background: #fff;box-shadow: 0px 0px 5px 1px;">
 			<header class="clearfix">
-				<span>WorkHorse <span class="bp-icon bp-icon-about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
+				<span>WorkHorse </span>
 				<nav>
 					<%= link_to 'View Site', root_path %>
 					<%= link_to 'View Admin', pages_admin_path %>
@@ -29,6 +29,8 @@ body {margin-top: 100px;}
 			</header>	
 </div>
 <% end %>
+
+
 <%= yield %>
 
 </body>

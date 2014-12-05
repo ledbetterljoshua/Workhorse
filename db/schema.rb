@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141129225701) do
+ActiveRecord::Schema.define(version: 20141204233829) do
 
   create_table "addresses", force: true do |t|
     t.string   "description"
@@ -71,6 +71,26 @@ ActiveRecord::Schema.define(version: 20141129225701) do
 
   add_index "employees", ["user_id"], name: "index_employees_on_user_id"
 
+  create_table "facts", force: true do |t|
+    t.string   "hours"
+    t.text     "pets"
+    t.text     "happyhour"
+    t.text     "fullbar"
+    t.string   "bikeracks"
+    t.text     "music"
+    t.text     "games"
+    t.string   "wifi"
+    t.string   "reservations"
+    t.string   "smoking"
+    t.string   "parking"
+    t.text     "whattoexpect"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "facts", ["user_id"], name: "index_facts_on_user_id"
+
   create_table "foods", force: true do |t|
     t.string   "description"
     t.datetime "created_at"
@@ -105,7 +125,12 @@ ActiveRecord::Schema.define(version: 20141129225701) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "user_id"
+    t.string   "band"
+    t.string   "url"
   end
+
+  add_index "jukeboxes", ["user_id"], name: "index_jukeboxes_on_user_id"
 
   create_table "logos", force: true do |t|
     t.datetime "created_at"

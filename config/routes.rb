@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :facts
+
   resources :logos
 
   resources :employees
@@ -26,6 +28,8 @@ Rails.application.routes.draw do
 
   get 'pages/home'
   get 'pages/admin'
+  get 'pages/about'
+  get 'pages/jukebox'
   root "pages#home"
 
   # The priority is based upon order of creation: first created -> highest priority.
