@@ -1,8 +1,14 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
+/*body {
 	background: image-url('Wood-Background.jpg');
+}*/
+body {
+	width: 100%;
+	background: image-url('pageWrapper.png') repeat-x 0 0,
+	 image-url('Wood-Background.jpg') repeat-x center 100%,
+	 image-url('textured_bg.jpg') repeat 0 0;
 }
 .contWidth {
 	max-width: 460px;
@@ -111,7 +117,7 @@ section.menuText {
     left: 930px;
     margin-top: 52px;
     position: absolute;
-    top: -320px;
+    top: -450px;
     width: 374px;
     z-index: 1;
 }
@@ -128,7 +134,7 @@ img.styleInstImage {
     height: 385px;
     left: 930px;
     position: absolute;
-    top: 200px;
+    top: 60px;
     width: 374px;
     z-index: 2;
 }
@@ -174,7 +180,7 @@ img.styleInstImage {
 	left: 1400px;
     max-width: 224px;
     position: absolute;
-    top: -290px;
+    top: -470px;
 }
 .flags {
 	background: image-url('worldBakery.png');
@@ -220,5 +226,156 @@ img.styleInstImage {
 
 
 
+header {
+  height: 113px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  width: 1000px;
+  left: 30px;
+}
+#display_homepage_title {
+  font-size: 29px;
+height: 126px;
+left: 472px;
+line-height: 46px;
+padding: 0;
+position: absolute;
+top: 86px;
+width: 115px;
+z-index: 1500;
+}
+#display_homepage_title a {
+  background: image-url('header_bg.png') no-repeat top left;
+color: white;
+display: block;
+height: 100%;
+left: 0;
+padding: 0;
+position: absolute;
+text-align: left;
+text-indent: -9999px;
+top: 0;
+width: 100%;
+z-index: 1500;
+background-size: 110px;
+}
+#topNav {
+margin: 0 auto;
+padding: 0;
+text-align: center;
+width: 1010px;
+height: 55px;
+left: 114px;
+position: relative;
+}
+#topNav .menu {
+  padding: 0;
+  width: auto;
+}
+#display_menu_1, #display_menu_2 {
+  float: left;
+  width: 348px;
+  height: 53px;
+  background: image-url('topNav.png') no-repeat 0 0;
+}
+div#display_menu_1 {
+margin-top: 24px;
+margin-left: -70px;
+}
+div#display_menu_2 {
+margin-top: 23px;
+margin-left: 174px;
+}
+#display_menu_1 > ul > li {
+float: right;
+list-style: none;
+color: #000;
+font-weight: 900;
+font-size: 30px;
+padding: 0 20px;
+margin-left: -20px;
+}
+#display_menu_2 > ul > li {
+float: right;
+list-style: none;
+color: #000;
+font-weight: 900;
+font-size: 30px;
+padding: 0 20px;
+margin-left: 0px;
+}
+footer {
+width: 100%;
+height: 220px;
+margin: 0 auto;
+display: block;
+margin-top: 170px;
+}
+.column {
+height: auto;
+width: 20%;
+position: relative;
+float: left;
+margin: 0 auto;
+}
+body > footer > div.column > ul > li {
+float: none;
+text-align: center;
+}
+.footerCont {
+	max-width: 800px;
+	margin:0 auto;
+}
 
 
+
+
+#sddm
+{	margin: 0;
+	padding: 0;
+	z-index: 30}
+
+#sddm li
+{	float: right;
+list-style: none;
+color: #000;
+font-weight: 900;
+font-size: 30px;
+padding: 0 23px;
+margin-left: -20px;}
+
+#sddm li a
+{	float: right;
+list-style: none;
+color: #000;
+font-weight: 900;
+font-size: 30px;
+padding: 0 20px;
+margin-left: -20px;}
+
+
+#sddm div
+{	position: absolute;
+visibility: hidden;
+margin: 0;
+padding: 0;
+background: #EAEBD8;
+border: 1px solid #5970B2;
+z-index: 999;
+float: none;
+margin-top: 50px;
+left: 92px;}
+
+	#sddm div a
+	{	position: relative;
+display: block;
+margin: 0;
+padding: 5px 10px;
+width: auto;
+float:none;}
+
+	#sddm div a:hover
+	{	background: #49A3FF;
+		color: #FFF}

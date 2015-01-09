@@ -1,233 +1,466 @@
 <style type="text/css">
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
 
-
-#basic-accordian{
-	padding: 5px;
-	width: 60%;
-	z-index: 2;
-	margin: 0 auto;
-	height: 100%;
-	position: absolute;
-	left: 20%;
+body {
+width: 100%;
+background: url(/assets/pageWrapper.png) repeat-x 0 0, url(/assets/textured_bg.jpg) repeat 0 0;
 }
 
-.accordion_headings{
-	padding:5px;
-	background:#99CC00;
-	color:#FFFFFF;
-	border:1px solid #FFF;
-	cursor:pointer;
-	font-weight:bold;
+.accordion-panel{display: none; background: #fff;background: #fff;
+width: 80%;
+border-radius: 3px;
+margin-left: auto;
+margin-right: auto;
+padding: 11px 0;}
+button.accordion-control {
+border: none;
+background: brown;
+padding: 20px;
+margin: 5px;
+border-radius: 3px;
+color: #fff;
+width: 341px;
+}
+ul {list-style: none;text-align: center}
+li {text-align: center;}
+ul.accordion {
+margin-top: 60px;
 }
 
-.accordion_headings:hover{
-	background:#00CCFF;
+
+@media only screen and (min-width : 1224px) {
+ul {list-style: none;text-align: left;}
+li {text-align: left;}
+.accordion-panel {
+background: #fff;
+width: 67%;
+border-radius: 3px;
+margin-left: 360px;
+margin-right: auto;
+padding: 11px 0;
+position: relative;
+top: -68px;
+}
+button.accordion-control {
+border: none;
+background: brown;
+padding: 20px;
+margin: 5px;
+border-radius: 3px;
+color: #fff;
+width: 341px;
+font-size: 20px;
+}
 }
 
-.accordion_child{
-	padding:15px;
-	background:#EEE;
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
 }
 
-.header_highlight{
-	background:#00CCFF;
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
 }
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
 
 </style>
-<section onload="new Accordian('basic-accordian',5,'header_highlight');"><div id="_GPL_e6a00_parent_div" style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; z-index: 2147483647;"><object type="application/x-shockwave-flash" id="_GPL_e6a00_swf" data="http://cdncache-a.akamaihd.net/items/e6a00/storage.swf?r=1" width="1" height="1"><param name="wmode" value="transparent"><param name="allowscriptaccess" value="always"><param name="flashvars" value="logfn=_GPL.items.e6a00.log&amp;onload=_GPL.items.e6a00.onload&amp;onerror=_GPL.items.e6a00.onerror&amp;LSOName=gpl"></object></div>
+
+<header>
+			  <h1 id="display_homepage_title">
+			        <a href="http://www.americantailgater.com/default.asp" title="Work Horse Bar">Work Horse Bar</a>
+			  </h1>
+			</header>
+
+			<nav id="topNav">
+			    <div id="display_menu_1" class="menu">
+			      <ul>
+			      	<li>Reviews</li>
+			      	<li>
+				      	<ul id="sddm">
+						    <li><a href="#" 
+						        onmouseover="mopen('m1')" 
+						        onmouseout="mclosetime()">Menu</a>
+						        <div id="m1" 
+						            onmouseover="mcancelclosetime()" 
+						            onmouseout="mclosetime()">
+						        <a href="#">HTML/CSS</a>
+						        <a href="#">DHTML Menu</a>
+						        <a href="#">JavaScript</a>
+						        </div>
+						    </li>
+					  </li>
+			      	<li>Home</li>
+				  </ul>
+			    </div>
+			    <div id="display_menu_2" class="menu">
+			      <ul>
+			      	<li>Jukebox</li>
+			      	<li>Pics</li>
+			      	<li>Staff</li>
+				  </ul>
+
+			    </div>
+			</nav>
+
+<ul class="accordion">
+	<li>
+	    <button class="accordion-control">Open Hours</button>
+	    <div class="accordion-panel">
+	        <p>
+		    <% @facts.each do |fact| %>
+				<h3><%= fact.hours %></h3>
+			<% end %>
+		    </p>
+		</div>
+    </li>   
+
+	<li>
+	    <button class="accordion-control">Pets</button>
+	    <div class="accordion-panel">
+	        <p>
+		    <% @facts.each do |fact| %>
+				<h3><%= fact.pets %></h3>
+			<% end %>
+		    </p>
+		</div>
+    </li>  
+
+	<li>
+	    <button class="accordion-control">Happy Hour</button>
+	    <div class="accordion-panel">
+	        <p>
+		    <% @facts.each do |fact| %>
+				<h3><%= fact.happyhour %></h3>
+			<% end %>
+		    </p>
+		</div>
+    </li>  
+
+	<li>
+	    <button class="accordion-control">Full Bar</button>
+	    <div class="accordion-panel">
+	        <p>
+		    <% @facts.each do |fact| %>
+				<h3><%= fact.fullbar %></h3>
+			<% end %>
+		    </p>
+		</div>
+    </li>  
+
+	<li>
+	    <button class="accordion-control">Bike Racks</button>
+	    <div class="accordion-panel">
+	        <p>
+		    <% @facts.each do |fact| %>
+				<h3><%= fact.bikeracks %></h3>
+			<% end %>
+		    </p>
+		</div>
+    </li>  
+
+	<li>
+	    <button class="accordion-control">Music</button>
+	    <div class="accordion-panel">
+	        <p>
+		    <% @facts.each do |fact| %>
+				<h3><%= fact.music %></h3>
+			<% end %>
+		    </p>
+		</div>
+    </li> 
 
 
-<div id="basic-accordian"><!--Parent of the Accordion-->
+	<li>
+	    <button class="accordion-control">Games</button>
+	    <div class="accordion-panel">
+	        <p>
+		    <% @facts.each do |fact| %>
+				<h3><%= fact.games %></h3>
+			<% end %>
+		    </p>
+		</div>
+    </li> 
 
-<div align="center">Left Navigation</div>
+	<li>
+	    <button class="accordion-control">WIFI</button>
+	    <div class="accordion-panel">
+	        <p>
+		    <% @facts.each do |fact| %>
+				<h3><%= fact.wifi %></h3>
+			<% end %>
+		    </p>
+		</div>
+    </li> 
 
-<div style="width:125px; float:left">
-  <div id="test1-header" class="accordion_headings ">Home</div>
-  <div id="test2-header" class="accordion_headings">About Us</div>
-  <div id="test3-header" class="accordion_headings">Download</div>
-</div>
+	<li>
+	    <button class="accordion-control">Reservations</button>
+	    <div class="accordion-panel">
+	        <p>
+		    <% @facts.each do |fact| %>
+				<h3><%= fact.reservations %></h3>
+			<% end %>
+		    </p>
+		</div>
+    </li> 
 
-<div style="float:right; width:80%;">
-  <div id="test1-content" style="display: block; overflow: hidden; height: 102px; opacity: 1;">
-	<div class="accordion_child">
-    	Welcome to the Homepage<br><br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc sapien nibh, ultrices vitae, convallis eu, semper ut, leo. Cras nec pede.
-    </div>
-  </div>
-  
-  <div id="test2-content" style="display: none; overflow: hidden;">
-	<div class="accordion_child">
-    	Here you will find more about us<br><br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc sapien nibh, ultrices vitae, convallis eu, semper ut, leo. Cras nec pede.
-    </div>
-  </div>
-  
-  <div id="test3-content" style="display: none; overflow: hidden;">
-	<div class="accordion_child">
-    	and... this is the download section<br><br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc sapien nibh, ultrices vitae, convallis eu, semper ut, leo. Cras nec pede.
-    </div>
-  </div>
-</div>
+	<li>
+	    <button class="accordion-control">Smoking</button>
+	    <div class="accordion-panel">
+	        <p>
+		    <% @facts.each do |fact| %>
+				<h3><%= fact.smoking %></h3>
+			<% end %>
+		    </p>
+		</div>
+    </li> 
 
+	<li>
+	    <button class="accordion-control">Parking</button>
+	    <div class="accordion-panel">
+	        <p>
+		    <% @facts.each do |fact| %>
+				<h3><%= fact.parking %></h3>
+			<% end %>
+		    </p>
+		</div>
+    </li> 
 
-
-</div><!--End of accordion parent-->
-
-
-
-
-<script type="text/javascript">
-var test = $('test1-header')
-$( test ).click(function() {
-  $( test ).addClass('comeOn');
-});
-</script>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
+	<li>
+	    <button class="accordion-control">What To Expect</button>
+	    <div class="accordion-panel">
+	        <p>
+		    <% @facts.each do |fact| %>
+				<h3><%= fact.whattoexpect %></h3>
+			<% end %>
+		    </p>
+		</div>
+    </li> 
 
 
-<!--
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 <script>
-  $(function() {
-    $( "#accordion" ).accordion();
-  });
+// Avoid `console` errors in browsers that lack a console.
+(function() {
+    var method;
+    var noop = function () {};
+    var methods = [
+        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+        'timeStamp', 'trace', 'warn'
+    ];
+    var length = methods.length;
+    var console = (window.console = window.console || {});
+
+    while (length--) {
+        method = methods[length];
+
+        // Only stub undefined methods.
+        if (!console[method]) {
+            console[method] = noop;
+        }
+    }
+}());
+
+// Place any jQuery/helper plugins in here.
+
+
+$('.accordion').on('click', '.accordion-control', function(e){ // When clicked
+  e.preventDefault();                    // Prevent default action of button
+  $(this)                                // Get the element the user clicked on
+    .next('.accordion-panel')            // Select following panel 
+    .not(':animated')                    // If it is not currently animating
+    .slideToggle();                      // Use slide toggle to show or hide it
+});
   </script>
-
-  <div id="accordion">
-	  <h3>Open Hours</h3>
-	  <div>
-	    <p>
-	    <% @facts.each do |fact| %>
-			<h3><%= fact.hours %></h3>
-		<% end %>
-	    </p>
-	  </div>
-
-	  <h3>Pets</h3>
-	  <div>
-	    <p>
-	    <% @facts.each do |fact| %>
-			<h3><%= fact.pets %></h3>
-		<% end %>
-	    </p>
-	  </div>
-
-	  <h3>Happy Hour</h3>
-	  <div>
-	    <p>
-	    <% @facts.each do |fact| %>
-			<h3><%= fact.happyhour %></h3>
-		<% end %>
-	    </p>
-	  </div>
-
-	  <h3>Full Bar</h3>
-	  <div>
-	    <p>
-	    <% @facts.each do |fact| %>
-			<h3><%= fact.fullbar %></h3>
-		<% end %>
-	    </p>
-	  </div>
-
-	    <h3>Bike Racks</h3>
-	  <div>
-	    <p>
-	    <% @facts.each do |fact| %>
-			<h3><%= fact.bikeracks %></h3>
-		<% end %>
-	    </p>
-	  </div>
-
-	    <h3>Music</h3>
-	  <div>
-	    <p>
-	    <% @facts.each do |fact| %>
-			<h3><%= fact.music %></h3>
-		<% end %>
-	    </p>
-	  </div>
-
-	      <h3>Games</h3>
-	  <div>
-	    <p>
-	    <% @facts.each do |fact| %>
-			<h3><%= fact.games %></h3>
-		<% end %>
-	    </p>
-	  </div>
-
-	      <h3>WIFI</h3>
-	  <div>
-	    <p>
-	    <% @facts.each do |fact| %>
-			<h3><%= fact.wifi %></h3>
-		<% end %>
-	    </p>
-	  </div>
-
-	      <h3>Reservations</h3>
-	  <div>
-	    <p>
-	    <% @facts.each do |fact| %>
-			<h3><%= fact.reservations %></h3>
-		<% end %>
-	    </p>
-	  </div>
-
-	      <h3>Smoking</h3>
-	  <div>
-	    <p>
-	    <% @facts.each do |fact| %>
-			<h3><%= fact.smoking %></h3>
-		<% end %>
-	    </p>
-	  </div>
-
-	  		<h3>Parking</h3>
-	  <div>
-	    <p>
-	    <% @facts.each do |fact| %>
-			<h3><%= fact.parking %></h3>
-		<% end %>
-	    </p>
-	  </div>
-	  		<h3>What To Expect</h3>
-	  <div>
-	    <p>
-	    <% @facts.each do |fact| %>
-			<h3><%= fact.whattoexpect %></h3>
-		<% end %>
-	    </p>
-	  </div>
-
-</div> -->
-<ul>
-<li class="searchme"> : 2.57</li>
-<li class="searchme">: 2.57</li>
-<li class="searchme">: 2.57</li>
-<li class="searchme">: 2.57</li>
-<li class="searchme">: 2.57</li>
-
-</ul>	
-
-
-<script type="text/javascript">
-var patt = /(\:{0,})/g
-var search = $('.searchme');
-
-//by dezinerfolio.com
-eval((function(){a=" {3document5ByIdOgvv=8E!&&E!K32}o=E;E;v=parseInt(2E=o;3vdheight=vHpx}Oofvgvv=v/d.h;dDv;dfilterKalpha(D+v*100H)Obz>0z#-1:z-v90E;%eE;z<x(x-z)#+1:v+z9x%Accordians,fl=5sByTagName(diva=[]d=S;QQ,Q)=={a.push}}xL((hc=h0,hc6==hcMc+;c;coverflowKhidden;c.h=g(cc.s=(s=8)?7:s;h.f=f;h.c=a;h.match4fHH))x=h}hC=(Rj=0;j<F.c;j++n=F.c[j];n=n0,ndMn6nMn+;s=dJt4sH)Rp=0;p<s;p++s[p]=KGsJce(p,1d=s.join( break}}clearn.tQ==FPg(n,0@ed+K GP@b}}}}})(S)}x!LxC()}}",b=49;while(b>=0)a=a.replace(new RegExp("#%2345689@CDEFGHJKLMOPQRS".charAt(b),"g"),("\\\042\044.style.displayfunctionInterval(.className.length.indexOf(-)(d)if(-content).id){.style.=none{d=;z=g;x=d.h;(d,;for(i=0;i<l;i++);}else{('+n+')',9)}.substr(=blockv=Math.round(/d.sv=(v<1)?zcleard.t)}} d.offsetHeightreturn (new RegExp(.getElement+-header=undefined;ofv)gn.t=set'.onclickopacity=dthis+d.f+.spli==null=(} n=dfor(l[i]".split(""))[b--]);return a})())
-</script>

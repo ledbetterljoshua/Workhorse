@@ -24,10 +24,8 @@
                         <div class="mySection">
                           <span class="thumbImg"><%= image_tag beer.image.url(:original, timestamp: false) %></span>
                           <h2><a href="<%= beer.link %>"> <%= beer.description %></a></h2>
-                              <% if beer.user == current_user %>
                                 <%= link_to 'Edit', edit_beer_path(beer) %>
                                 <%= button_to 'Destroy', beer, method: :delete, data: { confirm: 'Are you sure?' } %>
-                                <% end %>
                             </div>
                             <% end %>
                             <%= link_to 'New Beer', new_beer_path %>
@@ -37,10 +35,8 @@
                           
                            
                               <h2><%= drink.description %></h2>
-                              <% if drink.user == current_user %>
                                   <%= link_to 'Edit', edit_drink_path(drink) %>
                                   <%= button_to 'Destroy', drink, method: :delete, data: { confirm: 'Are you sure?' } %>
-                                <% end %>
                             
                             <% end %>
 
@@ -51,10 +47,8 @@
                           
                            
                               <h2><%= food.description %></h2>
-                              <% if food.user == current_user %>
                                   <%= link_to 'Edit', edit_food_path(food) %>
                                   <%= button_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' } %>
-                                <% end %>
                             
                             <% end %>
 
@@ -64,9 +58,7 @@
 						<% @menus.each do |menu| %>
                            
                               <p><%= raw menu.menu_br %></p>
-                              <% if menu.user == current_user %>
                                   <%= link_to 'Edit', edit_menu_path(menu) %>
-                                <% end %>
                             <% end %>
 					</section>
 					<section id="section-5">
@@ -74,27 +66,20 @@
                           
                            
                               <h2><%= phone.description %></h2>
-                              <% if phone.user == current_user %>
-                                  <%= link_to 'Edit', edit_phone_path(phone) %>
-                                <% end %>
-                            
+                                  <%= link_to 'Edit', edit_phone_path(phone) %>                         
                         <% end %>
 						<% @emails.each do |email| %>
                           
                            
                               <h2><a href="mailto:<%= email.description %>"><%= email.description %></a></h2>
-                              <% if email.user == current_user %>
                                   <%= link_to 'Edit', edit_email_path(email) %>
-                                <% end %>
                             
                         <% end %>
 						<% @addresses.each do |address| %>
                           
                            
                               <h2><%= address.description %></h2>
-                              <% if address.user == current_user %>
                                   <%= link_to 'Edit', edit_address_path(address) %>
-                                <% end %>
                             
                         <% end %>
 					</section>
@@ -103,10 +88,8 @@
                           
                            
                               <h2><%= review.description %></h2>
-                              <% if review.user == current_user %>
                                   <%= link_to 'Edit', edit_review_path(review) %>
                                   <%= button_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %>
-                                <% end %>
                             
                         <% end %>
 
@@ -137,19 +120,16 @@
             <% @logos.each do |logo| %>
                           
             <%= image_tag logo.image.url(:original, timestamp: false) %>
-                  <% if logo.user == current_user %>
                       <%= link_to 'Edit', edit_logo_path(logo) %>
-                    <% end %>
+                      <%= link_to 'New photo', new_logo_path %>
                 
             <% end %>
 						<% @images.each do |image| %>
                           
                            <%= image_tag image.image.url(:original, timestamp: false) %>
                               <h2><%= image.description %></h2>
-                              <% if image.user == current_user %>
                                   <%= link_to 'Edit', edit_image_path(image) %>
                                   <%= button_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %>
-                                <% end %>
                             
                         <% end %>
 
@@ -160,10 +140,9 @@
                           
                            
                               <h2><%= employee.description %></h2>
-                              <% if employee.user == current_user %>
+
                                   <%= link_to 'Edit', edit_employee_path(employee) %>
                                   <%= button_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %>
-                                <% end %>
                             
                         <% end %>
 
@@ -185,10 +164,7 @@
                               <h3><%= fact.smoking %></h3>
                               <h3><%= fact.parking %></h3>
                               <h3><%= fact.whattoexpect %></h3>
-                              <% if fact.user == current_user %>
                                   <%= link_to 'edit', edit_fact_path(fact) %>
-                                <% end %>
-                            
                         <% end %>
 
                         

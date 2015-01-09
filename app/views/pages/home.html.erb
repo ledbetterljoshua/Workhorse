@@ -1,4 +1,42 @@
+
+
 <div class="backimg">...</div>
+<header>
+			  <h1 id="display_homepage_title">
+			        <a href="http://www.americantailgater.com/default.asp" title="Work Horse Bar">Work Horse Bar</a>
+			  </h1>
+			</header>
+
+			<nav id="topNav">
+			    <div id="display_menu_1" class="menu">
+			      <ul>
+			      	<li>Reviews</li>
+			      	<li>
+				      	<ul id="sddm">
+						    <li><a href="#" 
+						        onmouseover="mopen('m1')" 
+						        onmouseout="mclosetime()">Menu</a>
+						        <div id="m1" 
+						            onmouseover="mcancelclosetime()" 
+						            onmouseout="mclosetime()">
+						        <a href="#">HTML/CSS</a>
+						        <a href="#">DHTML Menu</a>
+						        <a href="#">JavaScript</a>
+						        </div>
+						    </li>
+					  </li>
+			      	<li>Home</li>
+				  </ul>
+			    </div>
+			    <div id="display_menu_2" class="menu">
+			      <ul>
+			      	<li>Jukebox</li>
+			      	<li>Pics</li>
+			      	<li>Staff</li>
+				  </ul>
+
+			    </div>
+			</nav>
 <div class="mainContainer">
 	<div class="homeBody">
 		...
@@ -12,11 +50,8 @@
 		  <li><a href="#">-STAFF</a></li>
 		</div>
 		<div class="homeContainer">
-			<div class="logo">
-			<%= link_to root_path do %>
-			<%= image_tag @logos.last.image.url(:original, timestamp: false), :class => "styleLogo"  %>
-			<% end %>
-			</div>
+			
+    
 			<div class="twitterPlace">
 				<a class="twitter-timeline" href="https://twitter.com/Workhorsebar" data-widget-id="538442129073127424">Tweets by @Workhorsebar</a>
 				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -36,7 +71,7 @@
 			</div>
 			<div class="instgramCont">
                 <script src="http://snapwidget.com/js/snapwidget.js"></script>
-                <a href="http:instagram.com" target="_blank" class="instaOverlay"></a>
+                <a href="http://www.instagram.com/workhorsebar" target="_blank" class="instaOverlay"></a>
 					<iframe src="http://snapwidget.com/in/?u=d29ya2hvcnNlYmFyfGlufDEyNXwxfDF8fG5vfDV8bm9uZXxvblN0YXJ0fHllc3x5ZXM=&ve=281114" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width: 346px;
 					height: 360px !important;
 					position: relative;
@@ -68,6 +103,29 @@
 		</div> <!-- homeContainer -->
 	</div><!-- homeBody -->
 </div><!-- mainContainer -->
+	<footer>
+		<div class="footerCont">
+		<div class="column column1">
+			<ul>
+				<li>blah</li>
+				<li>blah</li>
+			</ul>
+		</div>
+		<div class="column column2">
+			<ul>
+				<li>blah</li>
+				<li>blah</li>
+			</ul>
+		</div>
+		<div class="column column3">
+			<ul>
+				<li>blah</li>
+				<li>blah</li>
+			</ul>
+		</div>
+	</div>
+	</footer>
 
+<script type="text/javascript">
 
-
+</script>

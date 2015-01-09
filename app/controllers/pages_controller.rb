@@ -31,6 +31,6 @@ class PagesController < ApplicationController
     @facts = Fact.all
   end
   def jukebox 
-    @jukeboxes = Jukebox.all
+    @logos = Logo.all
   end
 end
